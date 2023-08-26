@@ -1,41 +1,25 @@
 'use client';
 import { ButtonGoogle } from '@/components/ButtonGoogle';
+import { BoxContent } from '@/components/templates/Box';
 import styled from 'styled-components';
 import { LoginForms } from './components/login/LoginForms';
 
 const LoginStyle = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
+    padding: 6rem 0;
+    width: 70%;
 
-  .login {
-    background: ${({ theme }) => theme.colors.secondary};
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid ${({ theme }) => theme.colors.gray_300};
-    width: 600px;
-
-    &-container {
-      padding: 6rem 0;
-      width: 70%;
-
-      .info {
-        margin-bottom: 4rem;
-        text-align: center;
-
-        h1 {
-          font-size: ${({ theme }) => theme.fontSize.bigxl};
-          font-weight: 700;
-          margin-bottom: 1rem;
-        }
+    .info {
+      margin-bottom: 4rem;
+      text-align: center;
+      
+      h1 {
+        font-size: ${({ theme }) => theme.fontSize.bigxl};
+        font-weight: 700;
+        margin-bottom: 1rem;
       }
     }
-  }
 
-  .division {
+    .division {
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
     align-items: center;
@@ -67,34 +51,32 @@ const LoginStyle = styled.div`
         text-decoration: underline;
       }
     }
-  }
+  } 
 `
 
 const Login = () => {
   return (
-    <LoginStyle>
-      <div className='login'>
-        <div className='login-container'>
-          <div className='info'>
-            <h1>Trellix</h1>
-          </div>
-          
-          <LoginForms />
-   
-          <div className='division'>
-            <span />
-            Ou, login com
-            <span />
-          </div>
-
-          <ButtonGoogle>Continuar com o Google</ButtonGoogle>
-
-          <div className='register'>
-            <p>Ainda não tem uma conta? <span onClick={() => {}}>Registre Aqui</span></p>
-          </div>
+    <BoxContent>
+      <LoginStyle>
+        <div className='info'>
+          <h1>Trellix</h1>
         </div>
-      </div>
-    </LoginStyle>
+
+        <LoginForms />
+
+        <div className='division'>
+          <span />
+          Ou, login com
+          <span />
+        </div>
+
+        <ButtonGoogle>Continuar com o Google</ButtonGoogle>
+        
+        <div className='register'>
+          <p>Ainda não tem uma conta? <span onClick={() => {}}>Registre Aqui</span></p>
+        </div>
+      </LoginStyle>
+    </BoxContent>
   )
 }
 
