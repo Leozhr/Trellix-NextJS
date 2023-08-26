@@ -9,3 +9,53 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id          String     @id @default(uuid())
+  name        String
+  email       String     @unique
+  password    String
+  validUser   Boolean    @default(false)
+  reset       String?
+
+  dashboards  Dashboard[]
+}
+
+model Dashboard {
+  id          String     @id @default(uuid())
+  title       String
+
+  users       User[]
+  boards      Board[]
+}
+
+model Board {
+  id          String     @id @default(uuid())
+  dashId      String
+  title       String
+
+  dashboard   Dashboard  @relation(fields: [dashId], references: [id])
+  cards       Card[]
+}
+
+model Card {
+  id          String     @id @default(uuid())
+  boardId     String
+  title       String
+  description String
+  image       String
+  startDate   DateTime
+  endDate     DateTime
+
+  board       Board      @relation(fields: [boardId], references: [id])
+  tags        Tag[]
+}
+
+model Tag {
+  id          String     @id @default(uuid())
+  cardId      String
+  type        String
+  color       Int
+
+  cards       Card[]
+}
