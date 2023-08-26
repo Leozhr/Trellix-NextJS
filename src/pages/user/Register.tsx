@@ -1,7 +1,7 @@
 'use client';
 import { BoxContent } from '@/components/templates/Box';
 import styled from 'styled-components';
-import { RegisterForms } from './components/register/RegisterForms';
+import { RegisterForms } from './components/RegisterForms';
 
 const RegisterStyle = styled.div`
   padding: 6rem 0;

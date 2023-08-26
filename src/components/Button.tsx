@@ -19,12 +19,14 @@ const ButtonStyle = styled.button`
 
 interface ButtonProps {
   style?: React.CSSProperties;
+  type?: 'button' | 'submit' | 'reset';
+  onClick?: () => void;
   children: React.ReactNode;
 }
 
-const Button = ({ children, style }: ButtonProps) => {
+const Button = ({ children, style, type, onClick }: ButtonProps) => {
   return (
-    <ButtonStyle style={style}>
+    <ButtonStyle style={style} type={type} onClick={onClick}>
       {children}
     </ButtonStyle>
   )

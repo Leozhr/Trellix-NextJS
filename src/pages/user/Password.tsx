@@ -1,7 +1,7 @@
 'use client';
 import { BoxContent } from '@/components/templates/Box';
 import styled from 'styled-components';
-import { PasswordForms } from './components/password/PasswordForms';
+import { PasswordForms } from './components/PasswordForms';
 
 const PasswordStyle = styled.div`
   padding: 6rem 0;

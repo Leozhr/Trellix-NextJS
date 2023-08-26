@@ -2,7 +2,7 @@
 import { ButtonGoogle } from '@/components/ButtonGoogle';
 import { BoxContent } from '@/components/templates/Box';
 import styled from 'styled-components';
-import { LoginForms } from './components/login/LoginForms';
+import { LoginForms } from './components/LoginForms';
 
 const LoginStyle = styled.div`
     padding: 6rem 0;
