@@ -1,9 +1,9 @@
 'use client';
 import { BoxContent } from '@/components/templates/Box';
 import styled from 'styled-components';
-import { RegisterForms } from './components/register/RegisterForms';
+import { PasswordForms } from './components/password/PasswordForms';
 
-const RegisterStyle = styled.div`
+const PasswordStyle = styled.div`
   padding: 6rem 0;
   width: 70%;
 
@@ -22,20 +22,20 @@ const RegisterStyle = styled.div`
   }
 `
 
-const Register = () => {
+const Password = () => {
   return (
     <BoxContent> 
-      <RegisterStyle>
+      <PasswordStyle>
         <div className='info'>
-          <h1>Registre-se</h1>
-          <p>Registre-se agora e tenha acesso a recursos personalizados, 
-             recomendações sob medida e um perfil único que reflete seus interesses.</p>
+          <h1>Nova Senha</h1>
+          <p>Bem-vindo ao nosso mundo de possibilidades personalizadas! Ao se registrar agora, 
+             você estará prestes a desbloquear uma experiência feita especialmente para você. Digite sua senha abaixo</p>
         </div>
-        <RegisterForms />
-      </RegisterStyle>
+        <PasswordForms />
+      </PasswordStyle>
     </BoxContent>
   )
 }
 
-export { Register };
+export { Password };
 
