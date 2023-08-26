@@ -7,7 +7,7 @@ import { ThemeProvider } from 'styled-components';
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['500', '600', '700', '800'],
+  weight: ['400', '500', '600', '700', '800'],
 })
 
 export const metadata: Metadata = {
