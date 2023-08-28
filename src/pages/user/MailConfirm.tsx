@@ -1,6 +1,5 @@
-'use client';
 import { Button } from '@/components/Button';
-import { BoxContent } from '@/components/templates/Box';
+import { BoxContent } from '@/templates/Box';
 import styled from 'styled-components';
 
 const MailConfirmStyle = styled.div`

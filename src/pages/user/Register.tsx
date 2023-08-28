@@ -1,5 +1,5 @@
 'use client';
-import { BoxContent } from '@/components/templates/Box';
+import { BoxContent } from '@/templates/Box';
 import styled from 'styled-components';
 import { RegisterForms } from './components/RegisterForms';
 

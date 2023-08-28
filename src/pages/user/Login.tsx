@@ -1,6 +1,6 @@
 'use client';
 import { ButtonGoogle } from '@/components/ButtonGoogle';
-import { BoxContent } from '@/components/templates/Box';
+import { BoxContent } from '@/templates/Box';
 import styled from 'styled-components';
 import { LoginForms } from './components/LoginForms';
 

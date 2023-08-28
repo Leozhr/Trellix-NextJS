@@ -82,9 +82,8 @@ const RegisterForms = () => {
       if (!response.ok) {
         setError(result);
       } else {
-        router.push(`/register/${result.id}`);
-      }
-      
+        router.replace(`/register/${result.token}`);
+    }    
     } catch (error) {
       console.error(error);
     }
@@ -94,14 +93,14 @@ const RegisterForms = () => {
     <RegisterFormsStyle action='' onSubmit={handleSubmit(onSubmit)}>
       <InputStyle>
         <div>
-          <label htmlFor='text'>Nome <span>*</span></label>
+          <label>Nome <span>*</span></label>
           <input placeholder='Digite seu nome' type='text' {...register('name')}
           style={errors.name && { borderColor: '#ff3333' }} />
           {errors.name && <span>{errors.name.message}</span>}
         </div>
     
         <div>
-          <label htmlFor='email'>Email <span>*</span></label>
+          <label>Email <span>*</span></label>
           <input placeholder='Digite seu email' type='email' {...register('email')}
           style={ errors.email || error ? { borderColor: '#ff3333' } : {} }
           onChange={e => setError('')} />
@@ -110,14 +109,14 @@ const RegisterForms = () => {
         </div>
 
         <div>
-          <label htmlFor='password'>Senha <span>*</span></label>
+          <label>Senha <span>*</span></label>
           <input placeholder='Digite sua senha' type='password' {...register('password')}
           style={errors.password && { borderColor: '#ff3333' }} />
           {errors.password && <span>{errors.password.message}</span>}
         </div>
     
         <div>
-          <label htmlFor='confirmPassword'>Confirme sua Senha <span>*</span></label>
+          <label>Confirme sua Senha <span>*</span></label>
           <input placeholder='Digite sua senha novamente' type='password' {...register('confirmPassword')} />
         </div>
       </InputStyle> 
