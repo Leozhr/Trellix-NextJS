@@ -15,7 +15,7 @@ model User {
   token       String     @default(uuid())
   name        String
   email       String     @unique
-  password    String?
+  password    String
   validUser   Boolean    @default(false)
   reset       String?
 
